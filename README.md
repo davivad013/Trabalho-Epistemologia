@@ -4,7 +4,7 @@
 
 ---
 
-## Membros do Grupo (Ordem Alfabética)
+## Membros do Grupo
 
 * **Arthur Silva Vasconcelos** 
 * **Carlos Eduardo de Lima Pereira** 
