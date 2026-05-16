@@ -13,4 +13,4 @@
 * **Italo da Silva Santos** 
 * **Lucas Barros Barcelos** 
 * **Lucas Paulo Gonçalves** 
-* **Richar Elias Soares Viana**
+* **Richard Elias Soares Viana**
