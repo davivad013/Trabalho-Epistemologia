@@ -30,9 +30,7 @@
     pip install -r requirements.txt
 ```
 4. Vá para a pasta app:
-```bash 
-    cd app
-```
+
 5. Execute o aplicativo usando o comando:
 ```bash 
     python app.py
