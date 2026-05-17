@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epistemologia da Ciencia no Mundo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div id="hoverBalloon" class="hover-balloon" role="status" aria-live="polite"></div>
+
+  <main class="layout">
+    <header class="hero">
+      <div>
+        <p class="kicker">Epistemologia da Ciencia</p>
+        <h1>Contribuicoes Mundiais Sem Eurocentrismo</h1>
+      </div>
+      <section class="controls" aria-label="Troca de visualizacao">
+        <button class="view-btn active" data-view="flat">Mapa Invertido</button>
+        <button class="view-btn" data-view="globe">Globo Interativo</button>
+      </section>
+    </header>
+
+    <section class="stage-area">
+      <div class="view-panel active" id="flat-view" aria-label="Mapa mundi invertido">
+        <div class="map-stage upside-down">
+          <img
+            class="map-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+            alt="Mapa mundi"
+          >
+
+          <button class="continent-hotspot" aria-label="America do Norte" data-continent="america-do-norte" data-blurb="Conhecimento indigena, astronomia maia e matematica mesoamericana." style="--x: 17%; --y: 34%; --w: 18%; --h: 22%;"></button>
+          <button class="continent-hotspot" aria-label="America do Sul" data-continent="america-do-sul" data-blurb="Tecnologias andinas, saberes amazônicos e cartografias locais." style="--x: 28%; --y: 62%; --w: 11%; --h: 24%;"></button>
+          <button class="continent-hotspot" aria-label="Europa" data-continent="europa" data-blurb="Um polo historico, sem monopolizar a narrativa da ciencia global." style="--x: 49%; --y: 35%; --w: 10%; --h: 14%;"></button>
+          <button class="continent-hotspot" aria-label="Africa" data-continent="africa" data-blurb="Metalurgia antiga, medicina, matematica e filosofias africanas diversas." style="--x: 49%; --y: 56%; --w: 12%; --h: 26%;"></button>
+          <button class="continent-hotspot" aria-label="Asia" data-continent="asia" data-blurb="Algebra, medicina, navegacao e tradicoes epistemicas milenares." style="--x: 66%; --y: 44%; --w: 26%; --h: 28%;"></button>
+          <button class="continent-hotspot" aria-label="Oceania" data-continent="oceania" data-blurb="Navegacao polinesia, ecologia de ilhas e sistemas de conhecimento oral." style="--x: 82%; --y: 74%; --w: 10%; --h: 15%;"></button>
+          <button class="continent-hotspot" aria-label="Antartida" data-continent="antartida" data-blurb="Ciencia cooperativa internacional e debates geopoliticos do conhecimento." style="--x: 50%; --y: 94%; --w: 88%; --h: 10%;"></button>
+        </div>
+      </div>
+
+      <div class="view-panel" id="globe-view" aria-label="Globo interativo">
+        <div id="globeViz" class="globe-canvas"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/three@0.170.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
