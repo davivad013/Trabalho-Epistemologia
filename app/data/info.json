@@ -26,8 +26,9 @@
         "year": 2002
       }
     ],
-    "image": "images/ian-hacking.jpeg",
-    "flag": "🇨🇦"
+    "image": "/static/imagens/ian-hacking.jpeg",
+    "flag": "🇨🇦",
+    "reference": "https://pt.wikipedia.org/wiki/Ian_Hacking"
   },
   {
     "id": "thomas-kuhn",
@@ -52,8 +53,9 @@
         "year": 1978
       }
     ],
-    "image": "images/thomas-kuhn.jpeg",
-    "flag": "🇺🇸"
+    "image": "/static/imagens/thomas-kuhn.jpeg",
+    "flag": "🇺🇸",
+    "reference": "https://pt.wikipedia.org/wiki/Thomas_Kuhn"
   },
   {
     "id": "larry-laudan",
@@ -82,8 +84,9 @@
         "year": 1996
       }
     ],
-    "image": "images/larry-laudan.jpeg",
-    "flag": "🇺🇸"
+    "image": "/static/imagens/larry-laudan.jpeg",
+    "flag": "🇺🇸",
+    "reference": "https://pt.wikipedia.org/wiki/Relativismo"
   },
   {
     "id": "bimal-krishna-matilal",
@@ -108,8 +111,9 @@
         "year": 1985
       }
     ],
-    "image": "images/bimal-krishna-matilal.jpeg",
-    "flag": "🇮🇳"
+    "image": "/static/imagens/bimal-krishna-matilal.jpeg",
+    "flag": "🇮🇳",
+    "reference": "https://pt.wikipedia.org/wiki/Kanada"
   },
   {
     "id": "sundar-sarukkai",
@@ -134,8 +138,9 @@
         "year": 2012
       }
     ],
-    "image": "images/sundar-sarukkai.jpeg",
-    "flag": "🇮🇳"
+    "image": "/static/imagens/sundar-sarukkai.jpeg",
+    "flag": "🇮🇳",
+    "reference": "https://pt.wikipedia.org/wiki/Matem%C3%A1tica"
   },
   {
     "id": "mou-zongsan",
@@ -156,8 +161,9 @@
         "year": 1975
       }
     ],
-    "image": "images/mou-zongsan.jpeg",
-    "flag": "🇨🇳"
+    "image": "/static/imagens/mou-zongsan.jpeg",
+    "flag": "🇨🇳",
+    "reference": "https://pt.wikipedia.org/wiki/Novo_confucionismo"
   },
   {
     "id": "jitendra-nath-mohanty",
@@ -182,8 +188,9 @@
         "year": 2000
       }
     ],
-    "image": "images/jitendra-nath-mohanty.jpeg",
-    "flag": "🇮🇳"
+    "image": "/static/imagens/jitendra-nath-mohanty.jpeg",
+    "flag": "🇮🇳",
+    "reference": "https://pt.wikipedia.org/wiki/Filosofia_indiana"
   },
   {
     "id": "karen-ann-watson-gegeo",
@@ -200,8 +207,9 @@
         "year": 2001
       }
     ],
-    "image": "images/karen-ann-watson-gegeo.jpg",
-    "flag": "🇺🇸"
+    "image": "/static/imagens/karen-ann-watson-gegeo.jpeg",
+    "flag": "🇺🇸",
+    "reference": "https://en.wikipedia.org/wiki/Raymond_Firth"
   },
   {
     "id": "david-welchman-gegeo",
@@ -218,8 +226,9 @@
         "year": 2001
       }
     ],
-    "image": "images/david-welchman-gegeo.jpg",
-    "flag": "🇸🇧"
+    "image": "/static/imagens/david-welchman-gegeo.jpg",
+    "flag": "🇸🇧",
+    "reference": "https://en.wikipedia.org/wiki/Subramani"
   },
   {
     "id": "cresantia-frances-koya",
@@ -236,7 +245,7 @@
         "year": 2015
       }
     ],
-    "image": "images/cresantia-frances-koya.jpg",
+    "image": "/static/imagens/cresantia-frances-koya.jpeg",
     "flag": "🇫🇯"
   },
   {
@@ -266,8 +275,9 @@
         "year": 2005
       }
     ],
-    "image": "images/linda-tuhiwai-smith.jpg",
-    "flag": "🇳🇿"
+    "image": "/static/imagens/linda-tuhiwai-smith.jpeg",
+    "flag": "🇳🇿",
+    "reference": "https://pt.wikipedia.org/wiki/Linda_Tuhiwai_Smith"
   },
   {
     "id": "toon-van-meijl",
@@ -284,8 +294,9 @@
         "year": 2011
       }
     ],
-    "image": "images/toon-van-meijl.jpg",
-    "flag": "🇳🇱"
+    "image": "/static/imagens/toon-van-meijl.png",
+    "flag": "🇳🇱",
+    "reference": "https://en.wikipedia.org/wiki/Henri_J._M._Claessen"
   },
   {
     "id": "oscar-varsavsky",
@@ -310,7 +321,7 @@
         "year": 1974
       }
     ],
-    "image": "images/oscar-varsavsky.jpeg",
+    "image": "/static/imagens/oscar-varsavsky.jpeg",
     "flag": "🇦🇷"
   },
   {
@@ -336,8 +347,9 @@
         "year": 2018
       }
     ],
-    "image": "images/walter-mignolo.jpeg",
-    "flag": "🇦🇷"
+    "image": "/static/imagens/walter-mignolo.jpeg",
+    "flag": "🇦🇷",
+    "reference": "https://pt.wikipedia.org/wiki/Walter_Mignolo"
   },
   {
     "id": "silvia-rivera-cusicanqui",
@@ -362,8 +374,9 @@
         "year": 2018
       }
     ],
-    "image": "images/silvia-rivera-cusicanqui.jpeg",
-    "flag": "🇧🇴"
+    "image": "/static/imagens/silvia-rivera-cusicanqui.jpeg",
+    "flag": "🇧🇴",
+    "reference": "https://pt.wikipedia.org/wiki/Silvia_Rivera_Cusicanqui"
   },
   {
     "id": "rolando-garcia",
@@ -388,7 +401,7 @@
         "year": 2006
       }
     ],
-    "image": "images/rolando-garcia.jpg",
+    "image": "/static/imagens/rolando-garcia.jpeg",
     "flag": "🇦🇷"
   },
   {
@@ -415,7 +428,8 @@
       }
     ],
     "image": "images/cheikh-anta-diop.jpg",
-    "flag": "🇸🇳"
+    "flag": "🇸🇳",
+    "reference": "https://en.wikipedia.org/wiki/Cheikh_Anta_Diop"
   },
   {
     "id": "joseph-ki-zerbo",
@@ -464,5 +478,31 @@
     ],
     "image": "images/muyiwa-falaiye.jpg",
     "flag": "🇳🇬"
+  },
+  {
+    "id": "bas-van-fraassen",
+    "name": "Bas van Fraassen",
+    "nationality": "Holandês (carreira acadêmica nos Estados Unidos)",
+    "birth": 1941,
+    "death": null,
+    "continent": "América do Norte",
+    "shortDescription": "Bas van Fraassen é um dos principais filósofos da ciência contemporânea e formulador do empirismo construtivo. Sua teoria defende que o objetivo da ciência é construir teorias empiricamente adequadas, sem exigir que elas sejam consideradas literalmente verdadeiras em relação às entidades não observáveis.",
+    "longDescription": "Bas van Fraassen é um filósofo da ciência contemporâneo conhecido por desenvolver o empirismo construtivo, uma das principais correntes da epistemologia científica nas últimas décadas. Em oposição ao realismo científico, van Fraassen argumenta que o objetivo da ciência não é descobrir a verdade sobre entidades não observáveis, mas produzir teorias empiricamente adequadas, isto é, capazes de explicar corretamente os fenômenos observáveis. Segundo essa perspectiva, aceitar uma teoria científica significa reconhecer sua capacidade explicativa e preditiva em relação às observações, sem assumir necessariamente que todas as entidades postuladas pela teoria realmente existam. Essa posição procura preservar o sucesso da ciência sem comprometer-se com uma interpretação metafísica das teorias científicas. Sua filosofia influenciou profundamente os debates contemporâneos sobre realismo científico, explicação, observação, modelos científicos e racionalidade. O empirismo construtivo tornou-se uma das alternativas mais importantes ao realismo científico durante o final do século XX e permanece amplamente discutido na epistemologia da ciência.",
+    "books": [
+      {
+        "title": "The Scientific Image",
+        "year": 1980
+      },
+      {
+        "title": "Laws and Symmetry",
+        "year": 1989
+      },
+      {
+        "title": "Scientific Representation: Paradoxes of Perspective",
+        "year": 2008
+      }
+    ],
+    "flag": "🇳🇱",
+    "image": "/static/imagens/bas-van-fraassen.jpeg"
   }
 ]
