@@ -216,7 +216,7 @@ h1 {
   padding: 0.58rem 0.68rem;
   font-size: 0.82rem;
   line-height: 1.35;
-  pointer-events: none;
+  pointer-events: auto; /* changed from none so we can click */
   z-index: 30;
   opacity: 0;
   transform: translate3d(-999px, -999px, 0);
@@ -283,4 +283,121 @@ h1 {
     width: 100%;
     height: 58vh;
   }
+}
+
+/* Flat map SVG */
+#flat-map-container svg {
+  width: 100%;
+  height: 100%;
+}
+.continent-path {
+  fill: rgba(220, 231, 255, 0.1);
+  stroke: rgba(180, 221, 255, 0.2);
+  stroke-width: 0.5;
+  transition: fill 200ms, stroke 200ms, transform 200ms;
+  cursor: pointer;
+}
+
+/* Base colors by continent */
+.cont-africa { fill: rgba(124, 233, 197, 0.25); stroke: rgba(124, 233, 197, 0.45); }
+.cont-asia { fill: rgba(92, 188, 255, 0.25); stroke: rgba(92, 188, 255, 0.45); }
+.cont-europa { fill: rgba(212, 177, 255, 0.25); stroke: rgba(212, 177, 255, 0.45); }
+.cont-america-do-norte { fill: rgba(255, 183, 132, 0.25); stroke: rgba(255, 183, 132, 0.45); }
+.cont-america-do-sul { fill: rgba(249, 131, 177, 0.25); stroke: rgba(249, 131, 177, 0.45); }
+.cont-oceania { fill: rgba(141, 255, 209, 0.25); stroke: rgba(141, 255, 209, 0.45); }
+
+/* Hover states */
+.cont-africa:hover, .cont-africa.hovered { fill: rgba(124, 233, 197, 0.7) !important; stroke: rgba(124, 233, 197, 0.9); }
+.cont-asia:hover, .cont-asia.hovered { fill: rgba(92, 188, 255, 0.7) !important; stroke: rgba(92, 188, 255, 0.9); }
+.cont-europa:hover, .cont-europa.hovered { fill: rgba(212, 177, 255, 0.7) !important; stroke: rgba(212, 177, 255, 0.9); }
+.cont-america-do-norte:hover, .cont-america-do-norte.hovered { fill: rgba(255, 183, 132, 0.7) !important; stroke: rgba(255, 183, 132, 0.9); }
+.cont-america-do-sul:hover, .cont-america-do-sul.hovered { fill: rgba(249, 131, 177, 0.7) !important; stroke: rgba(249, 131, 177, 0.9); }
+.cont-oceania:hover, .cont-oceania.hovered { fill: rgba(141, 255, 209, 0.7) !important; stroke: rgba(141, 255, 209, 0.9); }
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal[hidden] {
+  display: none !important;
+}
+.modal-content {
+  background: var(--bg-elev);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  width: min(600px, 90vw);
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: transparent;
+  border: none;
+  color: var(--text-soft);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.close-btn:hover {
+  color: var(--danger);
+}
+.author-detail-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.author-detail-header h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--accent-2);
+}
+.author-detail-header p {
+  margin: 0;
+  color: var(--text-soft);
+}
+.author-works {
+  background: rgba(0,0,0,0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+.author-works ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+/* Author list inside balloon */
+.author-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.author-btn {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  color: var(--text-main);
+  padding: 0.6rem;
+  border-radius: 6px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: inherit;
+}
+.author-btn:hover {
+  background: rgba(124, 233, 197, 0.15);
+  border-color: var(--accent-2);
 }
