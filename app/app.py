@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from flask import Flask, abort, render_template
+from flask import Flask, abort, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -18,6 +18,16 @@ CARD_TEMPLATES = {
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/api/info")
+def api_info():
+    import json
+    data_path = Path(app.root_path) / "data" / "info.json"
+    if not data_path.exists():
+        return jsonify([])
+    with open(data_path, "r", encoding="utf-8") as f:
+        return jsonify(json.load(f))
+
 
 
 @app.route("/cards/<slug>")

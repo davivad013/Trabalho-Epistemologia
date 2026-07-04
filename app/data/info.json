@@ -1,0 +1,468 @@
+[
+  {
+    "id": "ian-hacking",
+    "name": "Ian Hacking",
+    "nationality": "Canadense",
+    "birth": 1936,
+    "death": 2023,
+    "continent": "América do Norte",
+    "shortDescription": "Ian Hacking foi um dos principais filósofos da ciência contemporânea. Sua obra destacou que o conhecimento científico não é produzido apenas por teorias, mas também pela experimentação, pelos instrumentos e pela capacidade da ciência de intervir no mundo. Suas reflexões ampliaram a epistemologia da ciência ao enfatizar o papel das práticas experimentais e das ciências humanas na construção do conhecimento científico.",
+    "longDescription": "Ian Hacking foi um filósofo da ciência, historiador das ideias e um dos principais representantes da filosofia da ciência contemporânea. Suas pesquisas abrangeram filosofia da ciência, filosofia da probabilidade, história das ciências humanas e metafísica histórica. Diferentemente das abordagens centradas apenas nas teorias científicas, Hacking destacou a importância da experimentação, dos instrumentos e das práticas laboratoriais na produção do conhecimento. Para ele, a ciência não apenas descreve ou representa a realidade, mas também a transforma por meio de intervenções experimentais que permitem manipular fenômenos e produzir novos objetos de investigação. Outra importante contribuição de Hacking foi o estudo das classificações utilizadas pelas ciências humanas. Ele mostrou que categorias como doenças, transtornos ou identidades sociais podem modificar o comportamento das próprias pessoas classificadas, fenômeno conhecido como efeito de looping (looping effect). Essa perspectiva aproximou filosofia, história e sociologia da ciência, demonstrando que o conhecimento científico é influenciado por práticas, instituições e contextos históricos. Na epistemologia da ciência, Hacking ampliou o debate ao defender que compreender a ciência exige analisar não apenas suas teorias, mas também seus métodos experimentais, seus instrumentos e sua capacidade de produzir intervenções concretas no mundo.",
+    "books": [
+      {
+        "title": "The Emergence of Probability",
+        "year": 1975
+      },
+      {
+        "title": "Representing and Intervening",
+        "year": 1983
+      },
+      {
+        "title": "The Social Construction of What?",
+        "year": 1999
+      },
+      {
+        "title": "Historical Ontology",
+        "year": 2002
+      }
+    ],
+    "image": "images/ian-hacking.jpg",
+    "flag": "🇨🇦"
+  },
+  {
+    "id": "thomas-kuhn",
+    "name": "Thomas Kuhn",
+    "nationality": "Estadunidense",
+    "birth": 1922,
+    "death": 1996,
+    "continent": "América do Norte",
+    "shortDescription": "Thomas Kuhn transformou a epistemologia da ciência ao defender que o desenvolvimento científico ocorre por meio de mudanças de paradigmas, e não apenas pelo acúmulo gradual de descobertas. Sua análise mostrou que fatores históricos e conceituais influenciam profundamente a produção e a aceitação do conhecimento científico.",
+    "longDescription": "Thomas Kuhn foi físico de formação e tornou-se um dos filósofos e historiadores da ciência mais influentes do século XX. Sua obra revolucionou a compreensão do desenvolvimento científico ao contestar a visão tradicional segundo a qual a ciência progride de maneira contínua e cumulativa. Em sua teoria, a atividade científica é organizada em torno de paradigmas, conjuntos de teorias, métodos, valores e práticas compartilhados por uma comunidade científica. Segundo Kuhn, durante os períodos de ciência normal, os pesquisadores resolvem problemas dentro do paradigma vigente. Entretanto, o acúmulo de anomalias pode desencadear uma revolução científica, levando à substituição do paradigma por outro incompatível. Essa mudança altera profundamente a forma como os cientistas interpretam os fenômenos, formulam problemas e estabelecem critérios de evidência. Sua abordagem transformou a epistemologia da ciência ao evidenciar que fatores históricos, sociais e conceituais desempenham um papel central na construção do conhecimento científico. As ideias de Kuhn influenciaram não apenas a filosofia da ciência, mas também áreas como sociologia do conhecimento, história da ciência e estudos sociais da tecnologia.",
+    "books": [
+      {
+        "title": "The Structure of Scientific Revolutions",
+        "year": 1962
+      },
+      {
+        "title": "The Essential Tension",
+        "year": 1977
+      },
+      {
+        "title": "Black-Body Theory and the Quantum Discontinuity, 1894–1912",
+        "year": 1978
+      }
+    ],
+    "image": "images/thomas-kuhn.jpg",
+    "flag": "🇺🇸"
+  },
+  {
+    "id": "larry-laudan",
+    "name": "Larry Laudan",
+    "nationality": "Estadunidense",
+    "birth": 1941,
+    "death": 2022,
+    "continent": "América do Norte",
+    "shortDescription": "Larry Laudan contribuiu para a epistemologia da ciência ao propor que o progresso científico deve ser avaliado pela capacidade das teorias de resolver problemas relevantes. Sua abordagem ofereceu uma alternativa às propostas de Popper, Kuhn e Lakatos, defendendo uma concepção mais pragmática da racionalidade científica baseada na resolução de problemas.",
+    "longDescription": "Larry Laudan foi um filósofo da ciência reconhecido por suas contribuições à epistemologia, à metodologia científica e à história da ciência. Seu trabalho surgiu como uma alternativa às propostas de Karl Popper, Thomas Kuhn e Imre Lakatos, buscando explicar de maneira mais precisa como ocorre o progresso científico. Em vez de enfatizar apenas a falseabilidade, os paradigmas ou os programas de pesquisa, Laudan argumentou que a principal função das teorias científicas é resolver problemas empíricos e conceituais. Sua concepção de progresso científico está baseada na eficácia das teorias para responder a questões relevantes, mesmo que essas teorias não sejam consideradas definitivamente verdadeiras. Além disso, Laudan rejeitou tanto o positivismo quanto o relativismo extremo, defendendo uma concepção de racionalidade científica baseada na comparação objetiva entre diferentes tradições de pesquisa. Sua contribuição para a epistemologia da ciência consiste em oferecer uma visão pragmática da racionalidade científica, na qual o sucesso de uma teoria depende de sua capacidade de solucionar problemas e promover avanços na investigação científica.",
+    "books": [
+      {
+        "title": "Progress and Its Problems",
+        "year": 1977
+      },
+      {
+        "title": "Science and Values",
+        "year": 1984
+      },
+      {
+        "title": "Science and Relativism",
+        "year": 1990
+      },
+      {
+        "title": "Beyond Positivism and Relativism",
+        "year": 1996
+      }
+    ],
+    "image": "images/larry-laudan.jpg",
+    "flag": "🇺🇸"
+  },
+  {
+    "id": "bimal-krishna-matilal",
+    "name": "Bimal Krishna Matilal",
+    "nationality": "Indiano",
+    "birth": 1935,
+    "death": 1991,
+    "continent": "Ásia",
+    "shortDescription": "Bimal Krishna Matilal ampliou a epistemologia da ciência ao demonstrar que a tradição filosófica da Índia desenvolveu teorias rigorosas sobre lógica, inferência e conhecimento muito antes da filosofia moderna. Seu trabalho aproximou a filosofia indiana da filosofia analítica, mostrando que diferentes tradições culturais podem contribuir para a compreensão da racionalidade e da produção do conhecimento científico.",
+    "longDescription": "Bimal Krishna Matilal foi um dos mais importantes filósofos indianos do século XX, especializado em lógica, epistemologia e filosofia da linguagem. Seu principal objetivo foi demonstrar que a tradição filosófica da Índia, especialmente as escolas Nyāya e Navya-Nyāya, desenvolveu teorias sofisticadas sobre conhecimento, inferência, linguagem e racionalidade comparáveis às da filosofia analítica contemporânea. Durante muito tempo, a filosofia indiana foi interpretada no Ocidente principalmente como tradição religiosa ou mística. Matilal combateu essa visão ao mostrar que filósofos indianos discutiam rigorosamente problemas como justificação do conhecimento, validade da percepção, inferência lógica e critérios de verdade. Seu trabalho aproximou a filosofia clássica indiana da epistemologia contemporânea, estabelecendo um diálogo produtivo entre diferentes tradições filosóficas. Sua contribuição para a epistemologia da ciência está em ampliar a compreensão das bases do conhecimento científico, demonstrando que conceitos fundamentais sobre evidência, inferência e racionalidade podem ser analisados sob perspectivas filosóficas diversas. Dessa forma, Matilal tornou-se uma referência na construção de uma epistemologia mais plural e intercultural.",
+    "books": [
+      {
+        "title": "The Navya-Nyāya Doctrine of Negation",
+        "year": 1968
+      },
+      {
+        "title": "Epistemology, Logic, and Grammar in Indian Philosophical Analysis",
+        "year": 1971
+      },
+      {
+        "title": "Logic, Language and Reality",
+        "year": 1985
+      }
+    ],
+    "image": "images/bimal-krishna-matilal.jpg",
+    "flag": "🇮🇳"
+  },
+  {
+    "id": "sundar-sarukkai",
+    "name": "Sundar Sarukkai",
+    "nationality": "Indiano",
+    "birth": 1960,
+    "death": null,
+    "continent": "Ásia",
+    "shortDescription": "Sundar Sarukkai contribui para a epistemologia da ciência ao defender que a ciência deve ser compreendida como uma prática humana, social e cultural. Suas pesquisas mostram que o conhecimento científico é influenciado por linguagem, experiência, instituições e contexto histórico, propondo uma visão mais ampla e plural da produção do conhecimento.",
+    "longDescription": "Sundar Sarukkai é um filósofo indiano contemporâneo cujas pesquisas abrangem filosofia da ciência, epistemologia, fenomenologia e filosofia da tecnologia. Sua obra procura compreender a ciência não apenas como um conjunto de teorias e métodos, mas como uma prática humana inserida em contextos históricos, sociais e culturais. Para Sarukkai, a produção do conhecimento científico depende das experiências dos pesquisadores, das instituições, da linguagem utilizada para descrever os fenômenos e das relações entre ciência e sociedade. Outro aspecto importante de seu trabalho é a defesa do pluralismo epistemológico. Sem rejeitar o rigor da ciência moderna, Sarukkai argumenta que outras formas de conhecimento, como tradições filosóficas e saberes locais, também possuem valor cognitivo e podem dialogar com a investigação científica. Essa perspectiva amplia a compreensão da ciência como uma atividade coletiva, ética e socialmente situada. Na epistemologia da ciência, sua contribuição consiste em destacar que a objetividade científica é construída por práticas compartilhadas e por processos históricos, e não apenas por regras metodológicas abstratas.",
+    "books": [
+      {
+        "title": "Philosophy of Symmetry",
+        "year": 2004
+      },
+      {
+        "title": "Indian Philosophy and Philosophy of Science",
+        "year": 2005
+      },
+      {
+        "title": "What is science",
+        "year": 2012
+      }
+    ],
+    "image": "images/sundar-sarukkai.jpg",
+    "flag": "🇮🇳"
+  },
+  {
+    "id": "mou-zongsan",
+    "name": "Mou Zongsan",
+    "nationality": "Chinês",
+    "birth": 1909,
+    "death": 1995,
+    "continent": "Ásia",
+    "shortDescription": "Mou Zongsan contribuiu indiretamente para a epistemologia da ciência ao questionar os limites do conhecimento científico e criticar o cientificismo. Ao integrar a tradição confucionista com a filosofia de Kant, defendeu que a racionalidade humana inclui dimensões éticas e intuitivas que complementam o conhecimento produzido pela ciência.",
+    "longDescription": "Mou Zongsan foi um dos mais importantes representantes do Novo Confucionismo e uma das figuras centrais da filosofia chinesa do século XX. Seu trabalho buscou revitalizar a tradição confucionista, demonstrando que ela poderia dialogar em igualdade de condições com a filosofia ocidental moderna, especialmente com a filosofia crítica de Immanuel Kant. Ao reinterpretar conceitos como razão, liberdade, moralidade e conhecimento, Mou procurou mostrar que a filosofia chinesa oferece respostas originais para problemas filosóficos universais. Embora não tenha desenvolvido uma teoria da ciência, Mou exerceu influência sobre a epistemologia ao questionar a ideia de que o conhecimento científico constitui a única forma legítima de conhecimento. Sua crítica ao cientificismo enfatiza que a racionalidade humana também envolve dimensões éticas, intuitivas e metafísicas, que não podem ser plenamente explicadas pelos métodos das ciências naturais. Sua obra contribui para ampliar o debate epistemológico ao defender uma concepção mais abrangente da razão, na qual ciência, filosofia e ética desempenham papéis complementares na compreensão da realidade.",
+    "books": [
+      {
+        "title": "Intellectual Intuition and Chinese Philosophy",
+        "year": 1971
+      },
+      {
+        "title": "Phenomenon and Thing-in-Itself",
+        "year": 1975
+      }
+    ],
+    "image": "images/mou-zongsan.jpg",
+    "flag": "🇨🇳"
+  },
+  {
+    "id": "jitendra-nath-mohanty",
+    "name": "Jitendra Nath Mohanty",
+    "nationality": "Indiano",
+    "birth": 1928,
+    "death": 2023,
+    "continent": "Ásia",
+    "shortDescription": "J. N. Mohanty contribuiu para a epistemologia da ciência ao investigar os fundamentos da percepção, da consciência e da objetividade na produção do conhecimento. Ao aproximar a fenomenologia de Husserl da filosofia clássica indiana, mostrou como a experiência e a intencionalidade são elementos essenciais para compreender a construção do conhecimento científico.",
+    "longDescription": "Jitendra Nath Mohanty foi um dos principais filósofos indianos contemporâneos e uma referência internacional em fenomenologia, epistemologia e filosofia comparada. Sua produção filosófica aproximou a tradição epistemológica indiana, especialmente a escola Nyāya, da fenomenologia desenvolvida por Edmund Husserl, estabelecendo um diálogo inovador entre duas importantes tradições filosóficas. Suas pesquisas concentraram-se em temas como percepção, consciência, intencionalidade, objetividade e racionalidade. Mohanty argumentou que compreender o conhecimento científico exige investigar as condições que tornam possível toda experiência cognitiva, mostrando que conceitos fenomenológicos como consciência e intencionalidade são fundamentais para entender como os cientistas observam, interpretam e constroem conhecimento sobre o mundo. Sua contribuição para a epistemologia da ciência consiste em oferecer uma análise dos fundamentos filosóficos da objetividade científica, enfatizando que o conhecimento não depende apenas de métodos experimentais, mas também das estruturas cognitivas que organizam a experiência. Ao integrar filosofia indiana e fenomenologia europeia, Mohanty tornou-se uma referência importante para abordagens interculturais da epistemologia.",
+    "books": [
+      {
+        "title": "The Concept of Intentionality",
+        "year": 1972
+      },
+      {
+        "title": "Reason and Tradition in Indian Thought: An Essay on the Nature of Indian Philosophical Thinking",
+        "year": 1992
+      },
+      {
+        "title": "Classical Indian Philosophy",
+        "year": 2000
+      }
+    ],
+    "image": "images/jitendra-nath-mohanty.jpg",
+    "flag": "🇮🇳"
+  },
+  {
+    "id": "karen-ann-watson-gegeo",
+    "name": "Karen Ann Watson-Gegeo",
+    "nationality": "Estadunidense (Pesquisadora nas Ilhas Salomão)",
+    "birth": 1940,
+    "death": null,
+    "continent": "Oceania",
+    "shortDescription": "Karen Ann Watson-Gegeo atua como antropóloga e linguista na defesa de formas não-hegemônicas de produção de saber, dedicando especial atenção às epistemologias indígenas e locais da Oceania.",
+    "longDescription": "Karen Ann Watson-Gegeo atua como antropóloga, linguista aplicada e cientista social crítica, desenvolvendo um trabalho multidisciplinar que cruza linguagem, sistemas de conhecimento, identidade de gênero e étnica, desenvolvimento comunitário e práticas educativas. Ancorada em teorias críticas (como o pós-estruturalismo, o pós-modernismo e o pós-colonialismo), na teoria feminista de terceira vaga e no pensamento de intelectuais de minorias étnicas, a sua pesquisa foca-se em metodologias como a etnografia crítica, a análise do discurso e a socialização da linguagem, com estudos de campo desenvolvidos nas Ilhas Salomão e no Havai. O cerne da sua investigação reside na justiça social e na defesa de formas não-hegemônicas de produção de saber, dedicando especial atenção às epistemologias indígenas e locais. Para a autora, os processos de conhecimento e a espiritualidade de comunidades nativas diferem das expectativas da sociedade e do sistema escolar convencional. Ela defende que os direitos humanos devem incluir, obrigatoriamente, o direito dos povos à sua língua materna e à sua própria epistemologia nas esferas institucionais e educativas. Além disso, a investigadora contesta a cultura acadêmica tradicional por afastar o público através de discursos abstratos e impessoais; em contrapartida, propõe uma nova forma de expressão científica que integra a narrativa pessoal, a experiência e a poesia no relato da investigação, humanizando a produção do conhecimento.",
+    "books": [
+      {
+        "title": "“How we know”: Kwara'ae rural villagers doing Indigenous epistemology (com David Welchman Gegeo)",
+        "year": 2001
+      }
+    ],
+    "image": "images/karen-ann-watson-gegeo.jpg",
+    "flag": "🇺🇸"
+  },
+  {
+    "id": "david-welchman-gegeo",
+    "name": "David Welchman Gegeo",
+    "nationality": "Salomônico",
+    "birth": 1950,
+    "death": null,
+    "continent": "Oceania",
+    "shortDescription": "David Welchman Gegeo dedica o seu trabalho à validação e preservação das epistemologias indígenas da Oceania e à descolonização cognitiva frente às matrizes eurocêntricas.",
+    "longDescription": "David Welchman Gegeo é um prestigiado cientista social e antropólogo cultural originário das Ilhas Salomão, cuja carreira acadêmica e de investigação se centra na sociologia do conhecimento e na descolonização cognitiva nas sociedades oceânicas. Com um grande percurso internacional, Gegeo dedica o seu trabalho à validação e preservação das epistemologias indígenas, com especial foco nas culturas Kwara'ae e Lau. A sua abordagem teórica defende que a verdadeira independência dos povos do Pacífico exige uma ruptura com as matrizes de pensamento eurocêntricas e coloniais que ainda moldam as instituições e os modelos de desenvolvimento na região. O ponto principal de sua investigação é promoção de uma pedagogia indígena e de uma práxis crítica, onde as formas locais de teorizar, criar conhecimento e validar a verdade são reconhecidas como dinâmicas e legítimas. Através de projetos de base comunitária, Gegeo incentiva as próprias populações rurais a assumirem o papel de investigadoras da sua história e cultura. Ao analisar as \"colisões epistemológicas\" entre os projetos de modernização globais e as filosofias locais, o autor advoga por uma transformação epistêmica e por um modelo de desenvolvimento ético que respeite e integre a ancestralidade e os sistemas de conhecimento nativos nas esferas educacionais e políticas da Oceânia.",
+    "books": [
+      {
+        "title": "“How we know”: Kwara'ae rural villagers doing Indigenous epistemology (com Karen Ann Watson-Gegeo)",
+        "year": 2001
+      }
+    ],
+    "image": "images/david-welchman-gegeo.jpg",
+    "flag": "🇸🇧"
+  },
+  {
+    "id": "cresantia-frances-koya",
+    "name": "Cresantia Frances Koya",
+    "nationality": "Fijiana",
+    "birth": 1970,
+    "death": null,
+    "continent": "Oceania",
+    "shortDescription": "Cresantia Frances Koya é uma pesquisadora fijiana que discute a epistemologia indígena na Oceania, a relação com o oceano e a sustentabilidade.",
+    "longDescription": "Cresantia Frances Koya é uma intelectual fijiana cuja pesquisa foca nas epistemologias indígenas da Oceania, com ênfase na relação vital das comunidades locais com o oceano e na busca por modelos de desenvolvimento sustentável baseados nos saberes ancestrais da região.",
+    "books": [
+      {
+        "title": "Reflections from Oceania on Indigenous epistemology, the ocean and sustainability",
+        "year": 2015
+      }
+    ],
+    "image": "images/cresantia-frances-koya.jpg",
+    "flag": "🇫🇯"
+  },
+  {
+    "id": "linda-tuhiwai-smith",
+    "name": "Linda Tuhiwai Smith",
+    "nationality": "Neozelandesa",
+    "birth": 1950,
+    "death": null,
+    "continent": "Oceania",
+    "shortDescription": "Linda Tuhiwai Smith é uma intelectual maori pioneira na discussão de metodologias de pesquisa descoloniais e na valorização das epistemologias indígenas.",
+    "longDescription": "Linda Tuhiwai Smith é uma escritora e acadêmica maori de grande relevância internacional. Seu trabalho pioneiro centra-se na descolonização de metodologias de pesquisa e na legitimação das epistemologias indígenas nas esferas acadêmica e educativa, questionando a hegemonia dos métodos ocidentais tradicionais.",
+    "books": [
+      {
+        "title": "Decolonizing methodologies: Research and indigenous peoples",
+        "year": 2013
+      },
+      {
+        "title": "Handbook of critical and indigenous methodologies",
+        "year": 2008
+      },
+      {
+        "title": "Kaupapa maori research: Reclaiming indigenous voice and vision",
+        "year": 2000
+      },
+      {
+        "title": "Building a research agenda for indigenous epistemologies and education",
+        "year": 2005
+      }
+    ],
+    "image": "images/linda-tuhiwai-smith.jpg",
+    "flag": "🇳🇿"
+  },
+  {
+    "id": "toon-van-meijl",
+    "name": "Toon Van Meijl",
+    "nationality": "Neerlandês (Especialista na Cultura Maori)",
+    "birth": 1950,
+    "death": null,
+    "continent": "Oceania",
+    "shortDescription": "Toon Van Meijl é um antropólogo holandês especializado na cultura maori, cujas pesquisas abordam os debates internos sobre o conhecimento nativo e a epistemologia indígena.",
+    "longDescription": "Toon Van Meijl é um antropólogo e acadêmico neerlandês especializado na sociedade e cultura Maori. Sua pesquisa se concentra no estudo das epistemologias indígenas e nos debates internos acerca do conhecimento nativo (\"inside knowledge\") na sociedade maori contemporânea, analisando a interface entre tradição oral e a modernidade.",
+    "books": [
+      {
+        "title": "Doing Indigenous epistemology: internal debates about inside knowledge in Māori society",
+        "year": 2011
+      }
+    ],
+    "image": "images/toon-van-meijl.jpg",
+    "flag": "🇳🇱"
+  },
+  {
+    "id": "oscar-varsavsky",
+    "name": "Oscar Varsavsky",
+    "nationality": "Argentino",
+    "birth": 1920,
+    "death": 1976,
+    "continent": "América do Sul",
+    "shortDescription": "Oscar Varsavsky foi um matemático e epistemólogo que criticou a ideia de neutralidade da ciência. Defendeu que a produção do conhecimento científico deve responder às necessidades sociais e políticas de cada país, tornando-se uma das principais referências latino-americanas na reflexão sobre ciência, tecnologia e desenvolvimento.",
+    "longDescription": "Oscar Varsavsky foi um matemático, físico e epistemólogo argentino, considerado um dos pioneiros do pensamento latino-americano sobre ciência, tecnologia e desenvolvimento. Inicialmente atuou como pesquisador em matemática aplicada e física, mas passou a dedicar-se à reflexão sobre papel social da ciência nos países periféricos. Sua principal crítica dirigia-se ao modelo científico importado dos países centrais, que, segundo ele, reproduzia relações de dependência econômica, política e cultural. Varsavsky defendia que a ciência não é neutra, pois está profundamente vinculada aos interesses e valores das sociedades que a produzem. Em oposição ao que chamou de cientificismo, propôs a construção de um projeto de ciência nacional, orientado para os problemas concretos da América Latina e comprometido com seu desenvolvimento social. Para ele, cada sociedade deveria definir suas próprias prioridades científicas em vez de reproduzir agendas impostas pelos países desenvolvidos. Sua contribuição para a epistemologia da ciência consiste em mostrar que a produção do conhecimento científico depende de escolhas políticas, econômicas e sociais. Suas ideias influenciaram profundamente os estudos latino-americanos sobre política científica, inovação e desenvolvimento.",
+    "books": [
+      {
+        "title": "Ciencia, política y cientificismo",
+        "year": 1969
+      },
+      {
+        "title": "Proyectos Nacionales",
+        "year": 1971
+      },
+      {
+        "title": "Estilos Tecnológicos",
+        "year": 1974
+      }
+    ],
+    "image": "images/oscar-varsavsky.jpg",
+    "flag": "🇦🇷"
+  },
+  {
+    "id": "walter-mignolo",
+    "name": "Walter Mignolo",
+    "nationality": "Argentino",
+    "birth": 1941,
+    "death": null,
+    "continent": "América do Sul",
+    "shortDescription": "Walter Mignolo é um dos principais representantes da epistemologia decolonial. Seu trabalho questiona a centralidade das epistemologias eurocêntricas e defende o reconhecimento de diferentes formas de produção do conhecimento, destacando a influência das relações coloniais na construção da ciência moderna.",
+    "longDescription": "Walter Mignolo é um filósofo, semiólogo e teórico decolonial argentino, reconhecido internacionalmente por suas contribuições aos estudos pós-coloniais e à epistemologia decolonial. Sua obra investiga como a expansão do colonialismo europeu moldou não apenas as estruturas políticas e econômicas do mundo moderno, mas também as formas consideradas legítimas de produzir conhecimento. Seu conceito de desobediência epistêmica propõe questionar a predominância das epistemologias eurocêntricas e reconhecer a legitimidade de outras formas de conhecimento produzidas por povos indígenas, comunidades tradicionalmente marginalizadas ou colonizadas. Mignolo argumenta que a ciência moderna foi construída em um contexto colonial e que compreender sua história exige analisar também as relações de poder que influenciaram sua expansão. Na epistemologia da ciência, sua principal contribuição é mostrar que o conhecimento científico não é produzido em um contexto neutro, mas está inserido em processos históricos, culturais e geopolíticos. Sua obra tornou-se uma referência para os estudos decoloniais e para os debates sobre pluralismo epistemológico.",
+    "books": [
+      {
+        "title": "Local Histories/Global Designs",
+        "year": 2000
+      },
+      {
+        "title": "The Darker Side of Western Modernity",
+        "year": 2011
+      },
+      {
+        "title": "Epistemic Disobedience",
+        "year": 2018
+      }
+    ],
+    "image": "images/walter-mignolo.jpg",
+    "flag": "🇦🇷"
+  },
+  {
+    "id": "silvia-rivera-cusicanqui",
+    "name": "Silvia Rivera Cusicanqui",
+    "nationality": "Boliviana",
+    "birth": 1949,
+    "death": null,
+    "continent": "América do Sul",
+    "shortDescription": "Silvia Rivera Cusicanqui desenvolve uma crítica decolonial à produção do conhecimento, valorizando os saberes indígenas e as experiências latino-americanas. Sua obra amplia a epistemologia da ciência ao defender a coexistência de diferentes formas de conhecer e interpretar a realidade.",
+    "longDescription": "Silvia Rivera Cusicanqui é uma socióloga, historiadora e intelectual boliviana reconhecida por suas contribuições aos estudos decoloniais e às epistemologias indígenas latino-americanas. Seu trabalho articula pesquisa histórica, teoria social e ativismo político para analisar as relações entre colonialismo, identidade, memória e produção do conhecimento. Rivera Cusicanqui critica abordagens decoloniais que, segundo ela, permanecem excessivamente vinculadas à academia ocidental. Em contrapartida, propõe uma epistemologia construída a partir das experiências e dos saberes dos povos indígenas andinos, valorizando formas de conhecimento frequentemente excluídas das instituições científicas tradicionais. Seu conceito de ch'ixi descreve a coexistência de diferentes racionalidades sem que uma elimine ou assimile a outra. Sua contribuição para a epistemologia da ciência está em defender que a produção do conhecimento deve incorporar perspectivas historicamente marginalizadas, reconhecendo a diversidade epistemológica existente nas sociedades latino-americanas.",
+    "books": [
+      {
+        "title": "Oppressed but Not Defeated",
+        "year": 1984
+      },
+      {
+        "title": "Ch'ixinakax utxiwa",
+        "year": 2010
+      },
+      {
+        "title": "Un mundo ch'ixi es posible",
+        "year": 2018
+      }
+    ],
+    "image": "images/silvia-rivera-cusicanqui.jpg",
+    "flag": "🇧🇴"
+  },
+  {
+    "id": "rolando-garcia",
+    "name": "Rolando García",
+    "nationality": "Argentino",
+    "birth": 1919,
+    "death": 2012,
+    "continent": "América do Sul",
+    "shortDescription": "Rolando García foi um físico e epistemólogo que contribuiu para a filosofia da ciência ao desenvolver estudos sobre interdisciplinaridade e sistemas complexos. Defendeu que a produção do conhecimento científico depende da integração entre diferentes áreas e da compreensão das relações entre teoria, observação e construção conceitual.",
+    "longDescription": "Rolando García foi um físico, meteorologista, epistemólogo e pesquisador argentino, reconhecido internacionalmente por seus estudos sobre sistemas complexos, interdisciplinaridade e epistemologia da ciência. Trabalhou em estreita colaboração com o psicólogo suíço Jean Piaget, desenvolvendo pesquisas sobre os processos de construção do conhecimento e a organização dos sistemas complexos. Sua principal contribuição foi mostrar que muitos problemas científicos e sociais não podem ser compreendidos por disciplinas isoladas. García defendia abordagens interdisciplinares capazes de integrar diferentes níveis de análise, articulando conhecimentos das ciências naturais, sociais e humanas. Para ele, a produção científica é um processo construtivo que envolve interação constante entre teoria, observação e organização conceitual. Na epistemologia da ciência, destacou a importância da interdisciplinaridade e da teoria dos sistemas complexos para compreender fenômenos como mudanças ambientais, desenvolvimento social e problemas globais. Sua obra tornou-se uma referência para pesquisadores interessados na integração entre diferentes áreas do conhecimento.",
+    "books": [
+      {
+        "title": "Psicogénesis e Historia de la Ciencia (com Jean Piaget)",
+        "year": 1982
+      },
+      {
+        "title": "El Conocimiento en Construcción",
+        "year": 2000
+      },
+      {
+        "title": "Sistemas Complejos",
+        "year": 2006
+      }
+    ],
+    "image": "images/rolando-garcia.jpg",
+    "flag": "🇦🇷"
+  },
+  {
+    "id": "cheikh-anta-diop",
+    "name": "Cheikh Anta Diop",
+    "nationality": "Senegalês",
+    "birth": 1923,
+    "death": 1986,
+    "continent": "África",
+    "shortDescription": "Cheikh Anta Diop foi um historiador e cientista que questionou interpretações eurocêntricas da história da ciência, demonstrando a importância das civilizações africanas na construção do conhecimento humano. Sua obra contribuiu para uma epistemologia mais plural, valorizando as tradições intelectuais africanas e a interdisciplinaridade.",
+    "longDescription": "Cheikh Anta Diop foi um historiador, antropólogo, físico e intelectual senegalês, considerado um dos mais importantes pensadores africanos do século XX. Sua obra buscou reconstruir a história da África a partir de evidências históricas, arqueológicas, linguísticas e científicas, contestando interpretações eurocêntricas que marginalizavam o papel das civilizações africanas no desenvolvimento da humanidade. Diop destacou especialmente a importância do Egito Antigo como parte integrante da história e da cultura africanas, defendendo que muitas contribuições científicas, filosóficas e tecnológicas atribuídas ao Ocidente possuíam raíces africanas. Além de seus estudos históricos, Diop utilizou métodos das ciências naturais, como análises de carbono-14, linguística comparada e antropologia física, para sustentar suas hipóteses, demonstrando que diferentes áreas do conhecimento podem contribuir para a investigação histórica. Sua abordagem interdisciplinar tornou-se uma referência para pesquisadores interessados em integrar métodos científicos e humanísticos. Na epistemologia da ciência, sua principal contribuição foi questionar a universalidade de narrativas científicas produzidas sob perspectivas eurocêntricas, defendendo a valorização das tradições intelectuais africanas e a construção de uma história da ciência mais inclusiva e plural.",
+    "books": [
+      {
+        "title": "The African Origin of Civilization: Myth or Reality",
+        "year": 1974
+      },
+      {
+        "title": "Civilization or Barbarism",
+        "year": 1981
+      },
+      {
+        "title": "Nations Nègres et Culture",
+        "year": 1954
+      }
+    ],
+    "image": "images/cheikh-anta-diop.jpg",
+    "flag": "🇸🇳"
+  },
+  {
+    "id": "joseph-ki-zerbo",
+    "name": "Joseph Ki-Zerbo",
+    "nationality": "Burquinense (Burkina Faso)",
+    "birth": 1922,
+    "death": 2006,
+    "continent": "África",
+    "shortDescription": "Joseph Ki-Zerbo foi um historiador que defendeu a valorização dos conhecimentos produzidos na África como condição para o desenvolvimento científico e educacional do continente. Sua obra contribuiu para a epistemologia da ciência ao promover uma perspectiva histórica e culturalmente situada da produção do conhecimento.",
+    "longDescription": "Joseph Ki-Zerbo foi um historiador, educador e intelectual de Burkina Faso, reconhecido por seu trabalho na reconstrução da história africana e na defesa de uma educação voltada para o desenvolvimento do continente. Foi um dos principais coordenadores da História Geral da África, projeto promovido pela UNESCO, que buscou produzir uma narrativa histórica baseada nas perspectivas e nas fontes africanas. Ki-Zerbo defendia que o desenvolvimento científico e tecnológico da África dependia da valorização dos conhecimentos produzidos pelas próprias sociedades africanas, criticando modelos educacionais e científicos importados que desconsideravam as realidades locais. Para ele, ciência, educação e cultura deveriam atuar conjuntamente na construção de sociedades mais autônomas e sustentáveis. Sua contribuição para a epistemologia da ciência está na defesa de uma produção do conhecimento comprometida com os contextos históricos e culturais africanos, valorizando a diversidade epistemológica e a participação das comunidades locais na construção do saber científico.",
+    "books": [
+      {
+        "title": "Histoire de l'Afrique Noire",
+        "year": 1972
+      },
+      {
+        "title": "A Quand l'Afrique?",
+        "year": 2003
+      },
+      {
+        "title": "Eduquer ou périr",
+        "year": 1990
+      }
+    ],
+    "image": "images/joseph-ki-zerbo.jpg",
+    "flag": "🇧🇫"
+  },
+  {
+    "id": "muyiwa-falaiye",
+    "name": "Muyiwa Falaiye",
+    "nationality": "Nigeriano",
+    "birth": 1962,
+    "death": null,
+    "continent": "África",
+    "shortDescription": "Muyiwa Falaiye investiga a \"Sagacidade Filosófica\", mostrando que comunidades africanas tradicionais produzem conhecimento racional, crítico e sistemático por meio da tradição oral. Seu trabalho valoriza essas formas de saber como contribuições legítimas para a epistemologia da ciência.",
+    "longDescription": "Muyiwa Falaiye é um filósofo nigeriano contemporâneo cujas pesquisas concentram-se em filosofia africana, epistemologia, ética e filosofia da cultura. Seu trabalho procura demonstrar que as tradições filosóficas africanas oferecem contribuições relevantes para debates contemporâneos sobre conhecimento, racionalidade e ciência. Em especial, Falaiye investiga como conceitos desenvolvidos em diferentes culturas africanas podem dialogar com a filosofia ocidental sem perder sua originalidade. Uma característica marcante de sua produção é a defesa da integração entre conhecimentos tradicionais africanos e práticas científicas contemporâneas. Em vez de compreender essas formas de conhecimento como opostas, Falaiye argumenta que elas podem ser complementares na busca por soluções para problemas sociais, ambientais e tecnológicos enfrentados pelas sociedades africanas. Sua contribuição para a epistemologia da ciência está em promover o reconhecimento das epistemologias africanas como fontes legítimas de conhecimento e em defender uma ciência aberta ao diálogo intercultural, capaz de incorporar diferentes formas de racionalidade e produção do saber.",
+    "books": [
+      {
+        "title": "African Philosophy and the Method of Ordinary Language",
+        "year": 2005
+      },
+      {
+        "title": "Diversos artigos sobre epistemologia africana, ética e filosofia da cultura publicados em periódicos internacionais",
+        "year": null
+      }
+    ],
+    "image": "images/muyiwa-falaiye.jpg",
+    "flag": "🇳🇬"
+  }
+]
