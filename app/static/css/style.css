@@ -314,6 +314,19 @@ h1 {
 .cont-america-do-sul:hover, .cont-america-do-sul.hovered { fill: rgba(249, 131, 177, 0.7) !important; stroke: rgba(249, 131, 177, 0.9); }
 .cont-oceania:hover, .cont-oceania.hovered { fill: rgba(141, 255, 209, 0.7) !important; stroke: rgba(141, 255, 209, 0.9); }
 
+/* Authors Map CSS */
+.authors-map-path {
+  fill: rgba(220, 231, 255, 0.1);
+  stroke: rgba(180, 221, 255, 0.2);
+  stroke-width: 0.5;
+  transition: fill 200ms, stroke 200ms;
+  cursor: pointer;
+}
+.hovered-country {
+  fill: rgba(124, 233, 197, 0.5) !important;
+  stroke: rgba(124, 233, 197, 0.9);
+}
+
 /* Modal */
 .modal {
   position: fixed;

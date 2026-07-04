@@ -21,12 +21,14 @@ const continentFromCountryContinent = {
 const viewButtons = document.querySelectorAll(".view-btn");
 const panels = {
   flat: document.getElementById("flat-view"),
+  "authors-map": document.getElementById("authors-map-view"),
   globe: document.getElementById("globe-view")
 };
 const hoverBalloon = document.getElementById("hoverBalloon");
 
 let globeStarted = false;
 let flatMapStarted = false;
+let authorsMapStarted = false;
 let globeInstance = null;
 let cursorX = 0;
 let cursorY = 0;
@@ -66,6 +68,10 @@ Promise.all([
   
   topologyData.processedFeatures = countries.features;
 
+  if (document.getElementById("authors-map-view").classList.contains("active")) {
+    initAuthorsMap();
+    authorsMapStarted = true;
+  }
   if (document.getElementById("flat-view").classList.contains("active")) {
     initFlatMap();
     flatMapStarted = true;
@@ -130,9 +136,12 @@ window.openAuthorModal = function(id) {
   }
 
   details.innerHTML = `
-    <div class="author-detail-header">
-      <h2>${author.flag ? author.flag + ' ' : ''}${author.name}</h2>
-      <p><strong>Nacionalidade:</strong> ${author.nationality} | <strong>Período:</strong> ${author.birth || '?'} - ${author.death || 'Presente'}</p>
+    <div class="author-detail-header" style="display: flex; align-items: center; gap: 1rem;">
+      <img src="${author.image || ''}" class="author-modal-img" alt="${author.name}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent);">
+      <div>
+        <h2>${author.flag ? author.flag + ' ' : ''}${author.name}</h2>
+        <p><strong>Nacionalidade:</strong> ${author.nationality} | <strong>Período:</strong> ${author.birth || '?'} - ${author.death || 'Presente'}</p>
+      </div>
     </div>
     <p>${author.longDescription || author.shortDescription || 'Sem descrição.'}</p>
     ${booksHtml}
@@ -192,6 +201,10 @@ function activarView(view) {
     initGlobe();
     globeStarted = true;
   }
+  if (view === "authors-map" && !authorsMapStarted && topologyData) {
+    initAuthorsMap();
+    authorsMapStarted = true;
+  }
   if (view === "flat" && !flatMapStarted && topologyData) {
     initFlatMap();
     flatMapStarted = true;
@@ -228,18 +241,28 @@ function initFlatMap() {
       
   const path = d3.geoPath().projection(projection);
   
-  svg.append("g")
-      .selectAll("path")
+  const g = svg.append("g");
+  
+  const zoom = d3.zoom()
+      .scaleExtent([1, 8])
+      .on("zoom", (event) => {
+          g.attr("transform", event.transform);
+      });
+  svg.call(zoom);
+
+  g.selectAll("path")
       .data(topologyData.processedFeatures)
       .join("path")
       .attr("d", path)
       .attr("class", d => {
           const cont = d.properties.CONTINENT;
+          if (cont === "Europe") return;
           const key = continentFromCountryContinent[cont];
           return `continent-path ${key ? 'cont-' + key : ''}`;
       })
       .on("mouseenter", function(event, d) {
           const cont = d.properties.CONTINENT;
+          if (cont === "Europe") return;
           const key = continentFromCountryContinent[cont];
           if(key) {
               d3.selectAll(`.cont-${key}`).classed("hovered", true);
@@ -249,6 +272,7 @@ function initFlatMap() {
       })
       .on("mouseleave", function(event, d) {
           const cont = d.properties.CONTINENT;
+          if (cont === "Europe") return;
           const key = continentFromCountryContinent[cont];
           if(key) {
               d3.selectAll(`.cont-${key}`).classed("hovered", false);
@@ -270,41 +294,37 @@ function initGlobe() {
     .atmosphereAltitude(0.23)
     .polygonCapColor((feat) => colorByContinent(feat.properties.CONTINENT))
     .polygonSideColor((feat) => {
-      if (feat.__isHovered) {
+      if (feat.properties.CONTINENT === "Europe") return "rgba(0, 25, 50, 0.08)";
+      if (globeInstance && globeInstance.__lastHoveredContinent === feat.properties.CONTINENT) {
         return "rgba(3, 36, 68, 0.95)";
       }
       return "rgba(0, 25, 50, 0.08)";
     })
-    .polygonAltitude((feat) => (feat.__isHovered ? 0.04 : 0.01))
+    .polygonAltitude((feat) => {
+      if (feat.properties.CONTINENT === "Europe") return 0.01;
+      return (globeInstance && globeInstance.__lastHoveredContinent === feat.properties.CONTINENT) ? 0.04 : 0.01;
+    })
     .polygonsTransitionDuration(220)
     .polygonStrokeColor(() => "rgba(180, 221, 255, 0.35)")
     .onPolygonHover((polygon) => {
-      if (globeInstance?.__lastHovered && globeInstance.__lastHovered !== polygon) {
-        globeInstance.__lastHovered.__isHovered = false;
+      let hoverCont = polygon ? polygon.properties.CONTINENT : null;
+      if (hoverCont === "Europe") hoverCont = null;
+
+      if (globeInstance.__lastHoveredContinent !== hoverCont) {
+        globeInstance.__lastHoveredContinent = hoverCont;
+        globe.polygonsData([...globeInstance.__polygonData]);
       }
 
-      if (!polygon) {
+      if (!hoverCont) {
         hideBalloon();
-        if (globeInstance?.__lastHovered) {
-          globeInstance.__lastHovered.__isHovered = false;
-          globe.polygonsData([...globeInstance.__polygonData]);
-          globeInstance.__lastHovered = null;
-        }
         return;
       }
 
-      const props = polygon.properties || {};
-      const continent = props.CONTINENT || "continente desconhecido";
-      const continentKey = continentFromCountryContinent[continent];
-      
+      const continentKey = continentFromCountryContinent[hoverCont];
       if (continentKey) {
-        const nome = continentInfo[continentKey]?.nome || continent;
+        const nome = continentInfo[continentKey]?.nome || hoverCont;
         showBalloon(buildAuthorBalloonContent(continentKey, nome), cursorX, cursorY);
       }
-
-      polygon.__isHovered = true;
-      globeInstance.__lastHovered = polygon;
-      globe.polygonsData([...globeInstance.__polygonData]);
     });
 
   globeInstance = globe;
@@ -315,4 +335,98 @@ function initGlobe() {
   globe.controls().autoRotate = true;
   globe.controls().autoRotateSpeed = 0.32;
   globe.pointOfView({ lat: -15, lng: -60, altitude: 2.05 });
+}
+
+function buildCountryAuthorBalloonContent(authors) {
+  if (authors.length === 0) return ``;
+  let list = authors.map(a => `<button class="author-btn" onclick="openAuthorModal('${a.id}')">${a.flag ? a.flag + ' ' : ''}${a.name}</button>`).join('');
+  return `<div class="author-list">${list}</div>`;
+}
+
+function initAuthorsMap() {
+  if (!topologyData) return;
+  const container = document.getElementById("authors-map-container");
+  container.innerHTML = "";
+  
+  const width = container.clientWidth || 960;
+  const height = container.clientHeight || 500;
+  
+  const svg = d3.select(container).append("svg")
+      .attr("viewBox", `0 0 960 500`)
+      .attr("preserveAspectRatio", "xMidYMid meet");
+      
+  const projection = d3.geoEquirectangular()
+      .scale(153)
+      .translate([480, 250])
+      .rotate([60, 0, 180]);
+      
+  const path = d3.geoPath().projection(projection);
+  
+  const g = svg.append("g");
+  
+  const zoom = d3.zoom()
+      .scaleExtent([1, 8])
+      .on("zoom", (event) => {
+          g.attr("transform", event.transform);
+      });
+  svg.call(zoom);
+
+  g.selectAll("path")
+      .data(topologyData.processedFeatures)
+      .join("path")
+      .attr("d", path)
+      .attr("class", d => {
+          return `continent-path authors-map-path`;
+      })
+      .on("mouseenter", function(event, d) {
+          const cont = d.properties.CONTINENT;
+          if (cont === "Europe") return;
+          
+          const countryIso = String(d.id).padStart(3, "0");
+          const countryAuthors = authorsData.filter(a => a.countryIso === countryIso);
+          if (countryAuthors.length > 0) {
+              d3.select(this).classed("hovered-country", true);
+              showBalloon(buildCountryAuthorBalloonContent(countryAuthors), event.clientX, event.clientY);
+          }
+      })
+      .on("mouseleave", function(event, d) {
+          d3.select(this).classed("hovered-country", false);
+          hideBalloon();
+      });
+
+  const imageGroup = mainG.append("g");
+  const countryImageCounts = {};
+  
+  authorsData.filter(a => a.countryIso).forEach(a => {
+      const feat = topologyData.processedFeatures.find(f => String(f.id).padStart(3, "0") === a.countryIso);
+      if (feat && feat.properties.CONTINENT !== "Europe") {
+          const centroid = path.centroid(feat);
+          const iso = a.countryIso;
+          if (!countryImageCounts[iso]) countryImageCounts[iso] = 0;
+          const index = countryImageCounts[iso]++;
+          
+          const offsets = [[0,0], [20, 0], [-20, 0], [0, 20], [0, -20], [20, 20], [-20, -20]];
+          const offX = offsets[index % offsets.length][0];
+          const offY = offsets[index % offsets.length][1];
+          
+          const size = 32;
+          const r = size / 2;
+          
+          const g = imageGroup.append("g")
+              .attr("transform", `translate(${centroid[0] + offX - r}, ${centroid[1] + offY - r})`)
+              .style("pointer-events", "none");
+              
+          g.append("image")
+              .attr("href", a.image)
+              .attr("width", size)
+              .attr("height", size)
+              .style("clip-path", "circle(50% at 50% 50%)")
+              .style("pointer-events", "auto")
+              .style("cursor", "pointer")
+              .on("click", function(event) {
+                  event.stopPropagation();
+                  openAuthorModal(a.id);
+              });
+      }
+  });
 }
