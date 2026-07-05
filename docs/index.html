@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epistemologia da Ciencia no Mundo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div id="hoverBalloon" class="hover-balloon" role="status" aria-live="polite"></div>
+
+  <main class="layout">
+    <header class="hero">
+      <div>
+        <p class="kicker">Epistemologia da Ciência</p>
+        <h1>Contribuções Mundiais</h1>
+      </div>
+      <section class="controls" aria-label="Troca de visualizacao">
+        <button class="view-btn active" data-view="flat">Mapa Invertido</button>
+        <button class="view-btn" data-view="authors-map">Visualizar por Autores</button>
+        <button class="view-btn" data-view="globe">Globo Interativo</button>
+      </section>
+    </header>
+
+    <section class="stage-area">
+      <div class="view-panel active" id="flat-view" aria-label="Mapa mundi plano">
+        <div class="map-stage" id="flat-map-container">
+          <!-- D3.js vai renderizar o SVG do mapa aqui -->
+        </div>
+      </div>
+
+      <div class="view-panel" id="authors-map-view" aria-label="Mapa com fotos dos autores">
+        <div class="map-stage" id="authors-map-container">
+          <!-- D3.js vai renderizar o SVG com fotos dos autores aqui -->
+        </div>
+      </div>
+
+      <div class="view-panel" id="globe-view" aria-label="Globo interativo">
+        <div id="globeViz" class="globe-canvas"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="authorModal" class="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-content">
+      <button id="closeModalBtn" class="close-btn" aria-label="Fechar">&times;</button>
+      <div id="authorDetails"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/three@0.170.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="static/js/main.js"></script>
+</body>
+</html>
