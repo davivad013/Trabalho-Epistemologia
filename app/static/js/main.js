@@ -256,13 +256,11 @@ function initFlatMap() {
       .attr("d", path)
       .attr("class", d => {
           const cont = d.properties.CONTINENT;
-          if (cont === "Europe") return;
           const key = continentFromCountryContinent[cont];
           return `continent-path ${key ? 'cont-' + key : ''}`;
       })
       .on("mouseenter", function(event, d) {
           const cont = d.properties.CONTINENT;
-          if (cont === "Europe") return;
           const key = continentFromCountryContinent[cont];
           if(key) {
               d3.selectAll(`.cont-${key}`).classed("hovered", true);
@@ -272,7 +270,6 @@ function initFlatMap() {
       })
       .on("mouseleave", function(event, d) {
           const cont = d.properties.CONTINENT;
-          if (cont === "Europe") return;
           const key = continentFromCountryContinent[cont];
           if(key) {
               d3.selectAll(`.cont-${key}`).classed("hovered", false);
@@ -294,21 +291,18 @@ function initGlobe() {
     .atmosphereAltitude(0.23)
     .polygonCapColor((feat) => colorByContinent(feat.properties.CONTINENT))
     .polygonSideColor((feat) => {
-      if (feat.properties.CONTINENT === "Europe") return "rgba(0, 25, 50, 0.08)";
       if (globeInstance && globeInstance.__lastHoveredContinent === feat.properties.CONTINENT) {
         return "rgba(3, 36, 68, 0.95)";
       }
       return "rgba(0, 25, 50, 0.08)";
     })
     .polygonAltitude((feat) => {
-      if (feat.properties.CONTINENT === "Europe") return 0.01;
       return (globeInstance && globeInstance.__lastHoveredContinent === feat.properties.CONTINENT) ? 0.04 : 0.01;
     })
     .polygonsTransitionDuration(220)
     .polygonStrokeColor(() => "rgba(180, 221, 255, 0.35)")
     .onPolygonHover((polygon) => {
       let hoverCont = polygon ? polygon.properties.CONTINENT : null;
-      if (hoverCont === "Europe") hoverCont = null;
 
       if (globeInstance.__lastHoveredContinent !== hoverCont) {
         globeInstance.__lastHoveredContinent = hoverCont;
@@ -337,19 +331,10 @@ function initGlobe() {
   globe.pointOfView({ lat: -15, lng: -60, altitude: 2.05 });
 }
 
-function buildCountryAuthorBalloonContent(authors) {
-  if (authors.length === 0) return ``;
-  let list = authors.map(a => `<button class="author-btn" onclick="openAuthorModal('${a.id}')">${a.flag ? a.flag + ' ' : ''}${a.name}</button>`).join('');
-  return `<div class="author-list">${list}</div>`;
-}
-
 function initAuthorsMap() {
   if (!topologyData) return;
   const container = document.getElementById("authors-map-container");
   container.innerHTML = "";
-  
-  const width = container.clientWidth || 960;
-  const height = container.clientHeight || 500;
   
   const svg = d3.select(container).append("svg")
       .attr("viewBox", `0 0 960 500`)
@@ -371,6 +356,7 @@ function initAuthorsMap() {
       });
   svg.call(zoom);
 
+  // Draw country paths
   mainG.selectAll("path")
       .data(topologyData.processedFeatures)
       .join("path")
@@ -379,56 +365,108 @@ function initAuthorsMap() {
           const cont = d.properties.CONTINENT;
           const key = continentFromCountryContinent[cont];
           return `continent-path authors-map-path ${key ? 'cont-' + key : ''}`;
-      })
-      .on("mouseenter", function(event, d) {
-          const cont = d.properties.CONTINENT;
-          if (cont === "Europe") return;
-          
-          const countryIso = String(d.id).padStart(3, "0");
-          const countryAuthors = authorsData.filter(a => a.countryIso === countryIso);
-          if (countryAuthors.length > 0) {
-              d3.select(this).classed("hovered-country", true);
-              showBalloon(buildCountryAuthorBalloonContent(countryAuthors), event.clientX, event.clientY);
-          }
-      })
-      .on("mouseleave", function(event, d) {
-          d3.select(this).classed("hovered-country", false);
-          hideBalloon();
       });
 
-  const imageGroup = mainG.append("g");
+  // Create defs for circular clip paths
+  const defs = svg.append("defs");
+
+  // Place author photos on their countries
+  const imageGroup = mainG.append("g").attr("class", "authors-image-layer");
   const countryImageCounts = {};
+  const size = 28;
+  const r = size / 2;
   
-  authorsData.filter(a => a.countryIso).forEach(a => {
+  authorsData.filter(a => a.countryIso).forEach((a, idx) => {
       const feat = topologyData.processedFeatures.find(f => String(f.id).padStart(3, "0") === a.countryIso);
-      if (feat && feat.properties.CONTINENT !== "Europe") {
+      if (feat) {
           const centroid = path.centroid(feat);
+          if (isNaN(centroid[0]) || isNaN(centroid[1])) return;
+          
           const iso = a.countryIso;
           if (!countryImageCounts[iso]) countryImageCounts[iso] = 0;
           const index = countryImageCounts[iso]++;
           
-          const offsets = [[0,0], [20, 0], [-20, 0], [0, 20], [0, -20], [20, 20], [-20, -20]];
-          const offX = offsets[index % offsets.length][0];
-          const offY = offsets[index % offsets.length][1];
+          // Spread authors within same country using a spiral pattern
+          const angle = index * 2.4; // golden angle for spreading
+          const dist = index === 0 ? 0 : 14 + index * 6;
+          const offX = index === 0 ? 0 : Math.cos(angle) * dist;
+          const offY = index === 0 ? 0 : Math.sin(angle) * dist;
           
-          const size = 32;
-          const r = size / 2;
+          const cx = centroid[0] + offX;
+          const cy = centroid[1] + offY;
           
-          const g = imageGroup.append("g")
-              .attr("transform", `translate(${centroid[0] + offX - r}, ${centroid[1] + offY - r})`)
-              .style("pointer-events", "none");
-              
-          g.append("image")
+          // Unique clip path for each author
+          const clipId = `author-clip-${a.id}`;
+          defs.append("clipPath")
+              .attr("id", clipId)
+              .append("circle")
+              .attr("cx", r)
+              .attr("cy", r)
+              .attr("r", r);
+          
+          const authorG = imageGroup.append("g")
+              .attr("transform", `translate(${cx - r}, ${cy - r})`)
+              .attr("class", "author-photo-group")
+              .style("cursor", "pointer");
+          
+          // Glow circle behind
+          authorG.append("circle")
+              .attr("cx", r)
+              .attr("cy", r)
+              .attr("r", r + 2)
+              .attr("fill", "none")
+              .attr("stroke", "rgba(124, 233, 197, 0.8)")
+              .attr("stroke-width", 1.5)
+              .attr("class", "author-ring");
+          
+          // Photo
+          authorG.append("image")
               .attr("href", a.image)
               .attr("width", size)
               .attr("height", size)
-              .style("clip-path", "circle(50% at 50% 50%)")
-              .style("pointer-events", "auto")
-              .style("cursor", "pointer")
-              .on("click", function(event) {
-                  event.stopPropagation();
-                  openAuthorModal(a.id);
-              });
+              .attr("clip-path", `url(#${clipId})`)
+              .attr("preserveAspectRatio", "xMidYMid slice");
+          
+          // Invisible larger hit area for easier clicking
+          authorG.append("circle")
+              .attr("cx", r)
+              .attr("cy", r)
+              .attr("r", r + 4)
+              .attr("fill", "transparent")
+              .attr("stroke", "none");
+          
+          // Click -> open modal
+          authorG.on("click", function(event) {
+              event.stopPropagation();
+              openAuthorModal(a.id);
+          });
+          
+          // Hover -> show mini tooltip with name
+          authorG.on("mouseenter", function(event) {
+              d3.select(this).select(".author-ring")
+                  .attr("stroke", "rgba(92, 188, 255, 1)")
+                  .attr("stroke-width", 2.5)
+                  .attr("r", r + 3);
+              d3.select(this).raise();
+              showBalloon(
+                  `<div style="display:flex;align-items:center;gap:0.5rem;">
+                    <img src="${a.image}" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:1.5px solid var(--accent);">
+                    <div>
+                      <strong style="display:inline;margin:0;">${a.flag || ''} ${a.name}</strong>
+                      <div style="color:var(--text-soft);font-size:0.75rem;margin-top:2px;">${a.nationality} · ${a.birth || '?'}–${a.death || 'Presente'}</div>
+                      <div style="color:var(--accent-2);font-size:0.72rem;margin-top:3px;">Clique para ver detalhes</div>
+                    </div>
+                  </div>`,
+                  event.clientX, event.clientY
+              );
+          });
+          authorG.on("mouseleave", function() {
+              d3.select(this).select(".author-ring")
+                  .attr("stroke", "rgba(124, 233, 197, 0.8)")
+                  .attr("stroke-width", 1.5)
+                  .attr("r", r + 2);
+              hideBalloon();
+          });
       }
   });
 }
