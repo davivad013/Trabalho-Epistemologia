@@ -21,6 +21,7 @@
       </div>
       <section class="controls" aria-label="Troca de visualizacao">
         <button class="view-btn active" data-view="flat">Mapa Invertido</button>
+        <button class="view-btn" data-view="authors-map">Visualizar por Autores</button>
         <button class="view-btn" data-view="globe">Globo Interativo</button>
       </section>
     </header>
@@ -29,6 +30,12 @@
       <div class="view-panel active" id="flat-view" aria-label="Mapa mundi plano">
         <div class="map-stage" id="flat-map-container">
           <!-- D3.js vai renderizar o SVG do mapa aqui -->
+        </div>
+      </div>
+
+      <div class="view-panel" id="authors-map-view" aria-label="Mapa com fotos dos autores">
+        <div class="map-stage" id="authors-map-container">
+          <!-- D3.js vai renderizar o SVG com fotos dos autores aqui -->
         </div>
       </div>
 

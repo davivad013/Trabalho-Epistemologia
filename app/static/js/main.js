@@ -362,21 +362,23 @@ function initAuthorsMap() {
       
   const path = d3.geoPath().projection(projection);
   
-  const g = svg.append("g");
+  const mainG = svg.append("g");
   
   const zoom = d3.zoom()
       .scaleExtent([1, 8])
       .on("zoom", (event) => {
-          g.attr("transform", event.transform);
+          mainG.attr("transform", event.transform);
       });
   svg.call(zoom);
 
-  g.selectAll("path")
+  mainG.selectAll("path")
       .data(topologyData.processedFeatures)
       .join("path")
       .attr("d", path)
       .attr("class", d => {
-          return `continent-path authors-map-path`;
+          const cont = d.properties.CONTINENT;
+          const key = continentFromCountryContinent[cont];
+          return `continent-path authors-map-path ${key ? 'cont-' + key : ''}`;
       })
       .on("mouseenter", function(event, d) {
           const cont = d.properties.CONTINENT;
